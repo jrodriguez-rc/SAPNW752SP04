@@ -93,12 +93,18 @@ or with debug option for more details:
 vagrant up --provision --provider virtualbox --debug 2>&1 | Tee-Object -FilePath ".\vagrant.log"
 ```
 On Windows Powershell
+
+First install VBGuests
 ```
-vagrant up --provision --provider virtualbox &> vagrant.log
+vagrant plugin install vagrant-vbguest
+```
+Then
+```
+vagrant up --provision --provider virtualbox
 ```
 or with debug option for more details:
 ```
-vagrant up --provision --provider virtualbox --debug &> vagrant.log
+vagrant up --provision --provider virtualbox --debug
 ```
 
 Wait until the vagrant command is finished. Then restart the instance with:
